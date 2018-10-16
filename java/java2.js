@@ -16,4 +16,5 @@ function hours() {
     var PTO = hours * YearlyPaychecks;
     outter.innerHTML = PTO / 40;
     }
+    
 
