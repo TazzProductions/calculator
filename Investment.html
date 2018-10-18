@@ -10,8 +10,36 @@
 <body>
     <div class="bloc">
         <h1>Investment Caculator</h1>
-        <p><span id="outter"></span></p>
+        <p>"Enter the cash sum you want to be invested."</p>
+        <form action="#" onsubmit="invest()">
+            <input type="text" id="intial_investment" value="0">
+            <p>"Select an intrest rate."</p>
+                <select name"format" id="intrest_rate" value="0">
+                    <option value="2%">2%</option>
+                    <option value="3%">3%</option>
+                    <option value="4%">4%</option>
+                    <option value="5%">5%</option>
+                    <option value="6%">6%</option>
+                    <option value="7%">7%</option>
+                </select>
+            <p>Please enter an additional sum for each term of your investment.</p>
+            <input type="text" id="time_invested" value="0">
+            
+            <p>Enter how long you want your investment term to be.</p>
+            
+            <input type="radio" id="years" name="term" value="1">
+            <label for ="years">Years</label>
+            
+            <input type="radio" id="years" name="term" value="1">
+            <label for ="months">Months</label>
 
+            <p>How much do you plan to contribute to the account per term?</p>
+            <input type ="text" id ="contributions" value ="0">
+
+            <input type ="submit" value="submit">
+
+            <p>You have earned a total of: $<span id="total_intrest"></span> and have total of: $<span id="account_total"></span> in your bank account as of now</p>
+        </form>
     </div>
     <script src="java/investment.js"></script>
 </body>
