@@ -10,11 +10,11 @@
 <body>
     <div class="bloc">
         <h1>Investment Caculator</h1>
-        <p>"Enter the cash sum you want to be invested."</p>
+        <p>"Enter the amount in DOLLARS you want to invest"</p>
         <form action="#" onsubmit="invest()">
             <input type="text" id="intial_investment" value="0">
-            <p>"Select an intrest rate."</p>
-                <select name"format" id="intrest_rate" value="0">
+            <p>What is your Intrest Rate: </p>
+                <select name="format" id="intrest_rate" value="0">
                     <option value="2%">2%</option>
                     <option value="3%">3%</option>
                     <option value="4%">4%</option>
@@ -22,19 +22,19 @@
                     <option value="6%">6%</option>
                     <option value="7%">7%</option>
                 </select>
-            <p>Please enter an additional sum for each term of your investment.</p>
+            <p>Please enter an additional Investment.</p>
             <input type="text" id="time_invested" value="0">
             
-            <p>Enter how long you want your investment term to be.</p>
+            <p>How long would you like your Investment term to be: </p>
             
             <input type="radio" id="years" name="term" value="1">
-            <label for ="years">Years</label>
+            <label for ="years"> In Years</label>
             
             <input type="radio" id="years" name="term" value="1">
-            <label for ="months">Months</label>
+            <label for ="months">In Months</label>
 
-            <p>How much do you plan to contribute to the account per term?</p>
-            <input type ="text" id ="contributions" value ="0">
+            <p>How much per term are you adding?</p>
+            <input type ="text" id ="additional" value ="0">
 
             <input type ="submit" value="submit">
 

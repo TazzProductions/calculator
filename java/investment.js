@@ -1,21 +1,21 @@
 function invest() {
     event.preventDefault();
-    var output = document.getElementById("total_intrest");
-    var output2 = document.getElementById("account_total");
-    var intial_investment = parseInt(document.getElementById("intrest_rate").value);
-    var intrest_rate = parseInt(document.getElementById("time_invested").value);
-    var time_invested = parseInt(document.getElementById("time_invested").value);
-    var contributions = parseInt(document.getElementById("contributions").value);
-    var investment_term = "";
-    var selectReturn = document.querySelector('input[name="term"]:checked').value;
-    if (selectReturn ==1) {
-        investment_term = time_invested;
-    } else if (selectReturn ==2){
-        investment_term = time_invested / 12;
+    var outputA = document.getElementById("total_intrest");
+    var outputB = document.getElementById("account_total");
+    var InitalInvestment = parseInt(document.getElementById("intrest_rate").value);
+    var InvestmentRate = parseInt(document.getElementById("time_invested").value);
+    var TimeInvested = parseInt(document.getElementById("time_invested").value);
+    var additional = parseInt(document.getElementById("additional").value);
+    var InvestmentTerm = "";
+    var Return = document.querySelector('input[name="term"]:checked').value;
+    if (Return ==1) {
+        InvestmentTerm = TimeInvested;
+    } else if (Return ==2){
+        InvestmentTerm = TimeInvested / 12;
     }
-    var total_contributions = investment_term * contributions;
-    var total_intrest = (intrest_rate / 100) * (total_contributions + intial_investment);
-    var account_total = total_intrest + total_contributions + intial_investment;
-    output.innerHTML = total_intrest;
-    output2.innerHTML = account_total;
+    var total_additional = InvestmentTerm * additional;
+    var total_intrest = (InvestmentRate / 100) * (total_additional + InitalInvestment);
+    var account_total = total_intrest + total_additional + InitalInvestment;
+    outputA.innerHTML = total_intrest;
+    outputB.innerHTML = account_total;
 }
